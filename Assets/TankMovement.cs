@@ -47,7 +47,7 @@ public class TankMovement : MonoBehaviour
             newRocket.transform.position = rigidBody.position;
             newRocket.GetComponent<Move>().started = true;
             newRocket.transform.eulerAngles = rigidBody.transform.eulerAngles;
-            newRocket.GetComponent<SpriteRenderer>().sortingLayerName = "Front2";
+            newRocket.GetComponent<SpriteRenderer>().sortingLayerName = "Gun";
         }
     }
 }

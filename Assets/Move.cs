@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
 
     private Rigidbody rb;
     private Transform trf;
-    private float speed = 5f;
+    private float speed = 15f;
     private float startTime;
 
 
