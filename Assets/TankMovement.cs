@@ -23,23 +23,35 @@ public class TankMovement : MonoBehaviour
         Vector2 currentPosition = rigidBody.position;
         if (Input.GetKey(KeyCode.W))
         {
-            rigidBody.MovePosition(currentPosition + new Vector2(0, 0.1f));
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            if (rigidBody.position.y < 5.4f)
+            {
+                rigidBody.MovePosition(currentPosition + new Vector2(0, 0.1f));
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rigidBody.MovePosition(currentPosition + new Vector2(-0.1f, 0));
-            transform.eulerAngles = new Vector3(0, 0, 90);
+            if (rigidBody.position.x > -11.7)
+            {
+                rigidBody.MovePosition(currentPosition + new Vector2(-0.1f, 0));
+                transform.eulerAngles = new Vector3(0, 0, 90);
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rigidBody.MovePosition(currentPosition + new Vector2(0, -0.1f));
-            transform.eulerAngles = new Vector3(0, 0, 180);
+            if (rigidBody.position.y > -5.5f)
+            {
+                rigidBody.MovePosition(currentPosition + new Vector2(0, -0.1f));
+                transform.eulerAngles = new Vector3(0, 0, 180);
+            }
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rigidBody.MovePosition(currentPosition + new Vector2(0.1f, 0));
-            transform.eulerAngles = new Vector3(0, 0, 270);
+            if (rigidBody.position.x < 11.7f)
+            {
+                rigidBody.MovePosition(currentPosition + new Vector2(0.1f, 0));
+                transform.eulerAngles = new Vector3(0, 0, 270);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
