@@ -17,16 +17,16 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         trf = GetComponent<Transform>();
-        startTime = Time.fixedTime;
+        startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
         trf.position += trf.up * Time.deltaTime * speed;
-        if (started && (Time.fixedTime - startTime) > 10)
+        if (started == true && (Time.time - startTime) > 4)
         {
-            Destroy(GetComponent<GameObject>());
+            Destroy(gameObject);
         }
     }
 }
