@@ -3736,6 +3736,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2159430712703374592, guid: 3ce99fb244a9a9f45bfee6658b6317fd, type: 3}
+      propertyPath: Dead
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2159430712703374594, guid: 3ce99fb244a9a9f45bfee6658b6317fd, type: 3}
       propertyPath: m_Name
       value: PlayerTank
@@ -4149,7 +4153,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
