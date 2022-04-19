@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: -1709083241253411494}
   m_Layer: 0
   m_Name: PlayerTank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocket: {fileID: 820007474779417703, guid: 523a239b28fd9524f994dc81ae943a9c, type: 3}
+  Dead: 0
 --- !u!50 &2159430712703374595
 Rigidbody2D:
   serializedVersion: 4
