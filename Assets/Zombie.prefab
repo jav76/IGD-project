@@ -173,5 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fd0b288d5eb3e43a45d0846b236082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Goal: {fileID: 0}
-  SpaceBetween: 1.5
+  SpaceBetween: 0

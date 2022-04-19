@@ -18,6 +18,9 @@ public class ZombieCollide : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(gameObject);
+        if (col.tag != "AI")
+        {
+           Destroy(gameObject);
+        }
     }
 }

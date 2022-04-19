@@ -11,6 +11,8 @@ public class TankMovement : MonoBehaviour
     public GameObject rocket;
     public bool Dead = false;
 
+    private float timeSurvived = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class TankMovement : MonoBehaviour
     {
         if (Dead == true)
             return;
+        timeSurvived = Time.time;
         Vector2 currentPosition = rigidBody.position;
         if (Input.GetKey(KeyCode.W))
         {
@@ -34,7 +37,7 @@ public class TankMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            if (rigidBody.position.x > -11.7)
+            if (rigidBody.position.x > -11.7f)
             {
                 rigidBody.MovePosition(currentPosition + new Vector2(-0.1f, 0));
                 transform.eulerAngles = new Vector3(0, 0, 90);
