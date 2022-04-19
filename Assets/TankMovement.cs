@@ -9,6 +9,7 @@ public class TankMovement : MonoBehaviour
     private Transform transform;
 
     public GameObject rocket;
+    public bool Dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Dead == true)
+            return;
         Vector2 currentPosition = rigidBody.position;
         if (Input.GetKey(KeyCode.W))
         {
